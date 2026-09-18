@@ -1,8 +1,0 @@
-{
-  "name": "tohfa-academy",
-  "private": true,
-  "version": "1.0.0",
-  "scripts": {
-    "vercel-build": "node scripts/generate-config.js"
-  }
-}
