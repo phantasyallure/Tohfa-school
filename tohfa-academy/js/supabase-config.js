@@ -10,5 +10,5 @@
  * client-side code as long as Row Level Security (RLS) policies are set
  * up correctly (see /README.md). Never put your "service_role" key here.
  */
-window.TOHFA_SUPABASE_URL = "https://YOUR-PROJECT-ID.supabase.co";
-window.TOHFA_SUPABASE_ANON_KEY = "YOUR-ANON-PUBLIC-KEY";
+window.TOHFA_SUPABASE_URL = "https://vkkzrbsdjjqjltwefqvp.supabase.co";
+window.TOHFA_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZra3pyYnNkampxamx0d2VmcXZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2ODYzODcsImV4cCI6MjEwNTI2MjM4N30.jnz32HMIudjHFCWxpOfbPV1LXgMlGDCbJw982g2x0Qc";
