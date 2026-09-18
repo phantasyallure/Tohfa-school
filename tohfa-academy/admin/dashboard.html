@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidatures — Administration Tohfa Oran</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="login-brand">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 6C74 6 90 26 90 50V94H10V50C10 26 26 6 50 6Z" fill="#6E1B33" stroke="#C7973F" stroke-width="4"/>
+        <path d="M50 32L60 50L50 68L40 50Z" fill="#C7973F"/>
+      </svg>
+      <div>
+        <strong>Tohfa Oran</strong>
+        <span>Administration</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="active">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 12l8-8 8 8M6 10v10h12V10" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        Candidatures
+      </a>
+      <a href="appearance.html">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 16l4.6-5.4a2 2 0 0 1 2.9-.1L15 14l1.6-1.8a2 2 0 0 1 2.9 0L21 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.4" fill="currentColor"/></svg>
+        Apparence du site
+      </a>
+      <a href="../index.html" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M14 4h6v6M20 4L10 14M8 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Voir le site
+      </a>
+      <button type="button" id="logout-btn">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Se déconnecter
+      </button>
+    </nav>
+    <p class="sidebar-foot" id="admin-email-tag"></p>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1>Candidatures</h1>
+        <p>Toutes les demandes d'inscription reçues via le site.</p>
+      </div>
+      <button type="button" class="btn-refresh" id="refresh-btn">Actualiser</button>
+    </div>
+
+    <div class="stat-row" id="stat-row">
+      <div class="stat-card"><div class="num" id="stat-total">—</div><div class="label">Total</div></div>
+      <div class="stat-card"><div class="num" id="stat-new">—</div><div class="label">Nouvelles (7 jours)</div></div>
+      <div class="stat-card"><div class="num" id="stat-nouveau">—</div><div class="label">Statut : nouveau</div></div>
+      <div class="stat-card"><div class="num" id="stat-inscrit">—</div><div class="label">Statut : inscrit</div></div>
+    </div>
+
+    <div class="table-toolbar">
+      <input type="search" id="search-input" placeholder="Rechercher un nom, téléphone, email...">
+      <select id="status-filter">
+        <option value="">Tous les statuts</option>
+        <option value="nouveau">Nouveau</option>
+        <option value="contacte">Contacté</option>
+        <option value="inscrit">Inscrit</option>
+        <option value="refuse">Refusé</option>
+      </select>
+    </div>
+
+    <div class="table-wrap">
+      <div id="table-slot">
+        <div class="loading-state">Chargement des candidatures...</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../js/supabase-config.js" defer></script>
+<script type="module" src="js/admin-dashboard.js"></script>
+</body>
+</html>
