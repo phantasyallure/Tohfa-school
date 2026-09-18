@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administration — Tohfa Oran</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div class="admin-login-screen">
+  <div class="login-card">
+    <div class="login-brand">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 6C74 6 90 26 90 50V94H10V50C10 26 26 6 50 6Z" fill="#6E1B33" stroke="#C7973F" stroke-width="4"/>
+        <path d="M50 32L60 50L50 68L40 50Z" fill="#C7973F"/>
+      </svg>
+      <div>
+        <strong>Tohfa Oran</strong>
+        <span>Espace administration</span>
+      </div>
+    </div>
+    <h1>Connexion</h1>
+    <p class="sub">Réservé à l'équipe de l'École Tohfa Oran.</p>
+
+    <form id="login-form">
+      <div class="login-field">
+        <label for="admin-email">Email</label>
+        <input type="email" id="admin-email" name="email" required autocomplete="username">
+      </div>
+      <div class="login-field">
+        <label for="admin-password">Mot de passe</label>
+        <input type="password" id="admin-password" name="password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="login-submit" id="login-submit">Se connecter</button>
+      <div class="login-msg" id="login-msg"></div>
+    </form>
+    <p class="login-note">Les comptes administrateurs sont créés depuis le tableau de bord Supabase (Authentication → Users). Il n'y a pas d'inscription publique.</p>
+  </div>
+</div>
+
+<script src="../js/supabase-config.js" defer></script>
+<script type="module" src="js/admin-auth.js"></script>
+</body>
+</html>
