@@ -239,6 +239,12 @@ html[dir="rtl"] .brand-name{ font-family: var(--font-display-ar); font-size: 1.3
 .hero.has-bg-photo .hero-arch-visual{ display: none; }
 .pillar.has-bg-photo .pillar-illustration{ display: none; }
 .cta-banner.has-bg-photo .cta-visual svg{ display: none; }
+.cta-banner.has-bg-photo .cta-visual .cta-script{ display: none; }
+/* Once a real photo is set, drop the decorative chevron texture so it
+   doesn't overlay the photo, and force light text on any pillar so it
+   stays readable against the dark photo overlay regardless of variant. */
+.hero.has-bg-photo::before{ display: none; }
+.pillar.has-bg-photo{ color: var(--cream); }
 
 /* ---------- Hero ---------- */
 .hero{ position: relative; overflow: hidden; background: var(--maroon); color: var(--cream); }
@@ -456,7 +462,7 @@ html[dir="rtl"] .modal-box h3{ font-family: var(--font-display-ar); }
 /* ---------- Forms ---------- */
 .form-card{
   background: var(--paper); border-radius: 24px; padding: clamp(1.8rem, 4vw, 2.8rem);
-  box-shadow: var(--shadow-soft); border: 1px solid var(--cream-deep); border-top: 6px solid var(--gold);
+  box-shadow: 0 24px 50px -20px rgba(20,8,14,0.28); border: 1px solid rgba(20,8,14,0.08); border-top: 6px solid var(--gold);
 }
 @media (max-width: 480px){
   .form-card{ border-radius: 18px; padding: 1.5rem 1.2rem; }
@@ -489,6 +495,7 @@ html[dir="rtl"] .form-success-state h3{ font-family: var(--font-display-ar); }
 .form-success-state p{ color: var(--ink-soft); margin-bottom: 1.6rem; }
 
 /* ---------- Apply page ---------- */
+.apply-section{ background: var(--cream-deep); }
 .apply-wrap{
   display: grid; grid-template-columns: 0.92fr 1.08fr;
   gap: clamp(2rem, 5vw, 3.6rem); align-items: start;
@@ -500,7 +507,7 @@ html[dir="rtl"] .form-success-state h3{ font-family: var(--font-display-ar); }
 
 .apply-steps{
   background: var(--paper); border-radius: 20px; padding: 1.6rem 1.7rem;
-  box-shadow: var(--shadow-card); border: 1px solid var(--cream-deep); margin-bottom: 1.4rem;
+  box-shadow: 0 10px 28px -14px rgba(20,8,14,0.18); border: 1px solid rgba(20,8,14,0.06); margin-bottom: 1.4rem;
 }
 .apply-steps-title{
   font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .07em;
